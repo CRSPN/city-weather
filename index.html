@@ -8,20 +8,35 @@
 </head>
 <body class="bg-dark">
     <div class="row min-vh-100 no-gutters">
-        <header class="col-12 col-lg-2 bg-light text-dark d-flex flex-column p-4 p-lg-3">
+        
+        <header id="city-list" class="col-12 col-lg-3 bg-light text-dark d-flex flex-column p-4 p-lg-3">
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search Cities" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </nav>
+            <ul>
+
+            </ul>
 
         </header>
         <main class="col-12 col-lg-10 d-flex flex-column">
-            <div class="col-12 col-lg-9">
-                <div id="chosenCity" class="">
+            
+            
+            
+            <div class="row">
+                <div class="col-12 col-md-9 border-bottom border-warning">
+                    <div id="chosenCity" class="">
+
+                    </div>
 
                 </div>
-
             </div>
             
             <div class="m-5 row justify-content-around">
                 
-                <div class="col-sm-12 col-md-5 col-xl-3 mb-3">
+                <div class="col-sm-12 col-md-4 col-xl-3 mb-3">
                     <div class="card">
                         <h4 class= "card-header bg-dark text-light">
                             To Do
@@ -29,7 +44,7 @@
                     </div>
                 </div>
                 
-                <div class="col-sm-12 col-md-5 col-xl-3 mb-3">
+                <!-- <div class="col-sm-12 col-md-5 col-xl-3 mb-3">
                     <div class="card">
                         <h4 class= "card-header bg-dark text-light">
                         To Do
@@ -56,7 +71,7 @@
                         To Do
                         </h4>
                     </div>
-                </div> 
+                </div>  -->
             </div>
 
         </main>
