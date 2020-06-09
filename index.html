@@ -13,7 +13,7 @@
             <nav class="navbar navbar-light bg-light">
                 <form class="form-inline">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search Cities" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <button id="setCity" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </nav>
             <ul>
@@ -28,6 +28,15 @@
             <div class="row">
                 <div class="col-12 col-md-9 border-bottom border-warning">
                     <div id="chosenCity" class="">
+                        <h3 id="cityName">
+
+                        </h3>
+                        <ul class="current-select">
+                            <li id="temp"></li>
+                            <li id="humid"></li>
+                            <li id="wind"></li>
+                            <li id="ultraViolet"></li>
+                        </ul>
 
                     </div>
 
