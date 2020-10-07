@@ -3,88 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
 </head>
-<body class="bg-dark">
-    <div class="row min-vh-100 no-gutters">
-        
-        <header id="city-list" class="col-12 col-lg-3 bg-light text-dark d-flex flex-column p-4 p-lg-3">
-            <nav class="navbar navbar-light bg-light">
-                <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search Cities" aria-label="Search">
-                  <button id="setCity" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </nav>
-            <ul>
-
-            </ul>
-
-        </header>
-        <main class="col-12 col-lg-10 d-flex flex-column">
-            
-            
-            
-            <div class="row">
-                <div class="col-12 col-md-9 border-bottom border-warning">
-                    <div id="chosenCity" class="">
-                        <h3 id="cityName">
-
-                        </h3>
-                        <ul class="current-select text-light">
-                            <li id="temp"></li>
-                            <li id="humid"></li>
-                            <li id="wind"></li>
-                            <li id="ultraViolet"></li>
-                        </ul>
-
-                    </div>
-
+<body>
+    
+    <header>
+        <h1 class = "text-center text-violet bg-light">Weather Dashboard</h1>
+    </header>
+    
+    <div class = "container-fluid">
+        <div class = "row">
+           
+            <div class = "col-12 col-md-3">
+                <div class = "card">
+                    <div class = "card-body">  
+                        <h2 class = "text-violet" >Search for City</h2>
+                        <form class = "city-input">
+                            <input type = "text" class = "form-control" placeholder="Enter City Name"></input>
+                            <button class="btn btn-primary btn-block" id = "searchButton">
+                                <span class = "oi oi-magnifying-glass"></span>
+                            </button> 
+                        </form>
+                    </div> 
                 </div>
+                <div class = "card">
+                    
+                    <div class = "list-group" id = "cityHistory">
+                        <h2 class = "text-center pt-2">Recent Searches</h2>
+                        <button class = "btn btn-primary" id = "refreshBtn">
+                            <h5 class = "text-center pt-1">Refresh List <img src="https://img.icons8.com/android/24/000000/refresh.png"/></h5>
+                        </button>
+                    </div>
+                   
+                </div>                    
             </div>
-            
-            <div class="m-5 row justify-content-around">
+           
+            <div class = "col-12 col-md-9">
                 
-                <div class="col-sm-12 col-md-4 col-xl-3 mb-3">
-                    <div class="card">
-                        <h4 class= "card-header bg-dark text-light">
-                            card example?
-                        </h4>
+                <div id = "weathCard">
+                    <div class = "card-body">
+                        <h2 class = "card-title">
+                                <span id="city-search-term"></span>
+                                <span id = "date"></span>
+                                <span>
+                                    <img id = "weatherIcon"></img>   
+                                </span>
+                        </h2>
+                        <div class = "card-text" id = "curWeath">
+                        </div>
                     </div>
                 </div>
-                
-                <!-- <div class="col-sm-12 col-md-5 col-xl-3 mb-3">
-                    <div class="card">
-                        <h4 class= "card-header bg-dark text-light">
-                        To Do
-                        </h4>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-5 col-xl-3 mb-3">
-                    <div class="card">
-                        <h4 class= "card-header bg-dark text-light">
-                        To Do
-                        </h4>
-                    </div>
-                </div>  
-                <div class="col-sm-12 col-md-5 col-xl-3 mb-3">
-                    <div class="card">
-                        <h4 class= "card-header bg-dark text-light">
-                        To Do
-                        </h4>
-                    </div>
-                </div>               
-                <div class="col-sm-12 col-md-5 col-xl-3 mb-3">
-                    <div class="card">
-                        <h4 class= "card-header bg-dark text-light">
-                        To Do
-                        </h4>
-                    </div>
-                </div>  -->
+              
+                <h2 id = "forecastLabel"></h2>
+                <div class="row" id = "forecast"></div>
+               
             </div>
-
-        </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
